@@ -724,7 +724,7 @@ export default function ConsultationForm() {
                     <div className="border-b pb-6">
                       <div className="flex items-center gap-3 mb-2">
                         <Image
-                          src="/prof3.png"
+                          src="/prof4.png"
                           alt="Leslie Alexander"
                           width={40}
                           height={40}
