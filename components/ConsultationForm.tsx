@@ -371,7 +371,7 @@ export default function ConsultationForm() {
             fullWidth
             placeholder="Specify other (Optional)"
             value={otherConcern}
-            onChange={(e) => setOtherConcern(e.target.value)}
+            onChange={(e :any) => setOtherConcern(e.target.value)}
             variant="outlined"
             sx={{
               "& .MuiOutlinedInput-root": {
