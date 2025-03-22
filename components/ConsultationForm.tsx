@@ -71,7 +71,7 @@ export default function ConsultationForm() {
           rating: 5,
           comment:
             "Lorem ipsum dolor sit amet consectetur. Aliquet amet nulla leo ipsum. Neque dolor pretium at maecenas in ac amet.",
-          avatar: "/ecl.png",
+          avatar: "/prof2.png",
         },
         {
           id: 3,
@@ -80,7 +80,7 @@ export default function ConsultationForm() {
           rating: 4,
           comment:
             "Lorem ipsum dolor sit amet consectetur. Aliquet amet nulla leo ipsum. Neque dolor pretium at maecenas in ac amet.",
-          avatar: "/ecl.png",
+          avatar: "/prof1.png",
         },
       ],
     },
@@ -691,7 +691,7 @@ export default function ConsultationForm() {
                   <div className="border-b pb-6">
                     <div className="flex items-center gap-3 mb-2">
                       <Image
-                        src="/placeholder.svg?height=40&width=40"
+                        src="/prof1.png"
                         alt="Akash basak"
                         width={40}
                         height={40}
@@ -724,7 +724,7 @@ export default function ConsultationForm() {
                     <div className="border-b pb-6">
                       <div className="flex items-center gap-3 mb-2">
                         <Image
-                          src="/placeholder.svg?height=40&width=40"
+                          src="/prof3.png"
                           alt="Leslie Alexander"
                           width={40}
                           height={40}
@@ -753,7 +753,7 @@ export default function ConsultationForm() {
                     <div className="border-b pb-6">
                       <div className="flex items-center gap-3 mb-2">
                         <Image
-                          src="/placeholder.svg?height=40&width=40"
+                          src="/prof2.png"
                           alt="Albert Flores"
                           width={40}
                           height={40}
