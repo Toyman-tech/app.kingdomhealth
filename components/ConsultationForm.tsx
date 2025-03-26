@@ -1147,23 +1147,6 @@ export default function ConsultationForm() {
       <header className="border-b border-gray-200 py-4 px-6">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center">
-            {/* <svg
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="text-[#30c7b5]"
-            >
-              <path
-                d="M20 0C8.954 0 0 8.954 0 20C0 31.046 8.954 40 20 40C31.046 40 40 31.046 40 20C40 8.954 31.046 0 20 0ZM20 36.3636C10.9636 36.3636 3.63636 29.0364 3.63636 20C3.63636 10.9636 10.9636 3.63636 20 3.63636C29.0364 3.63636 36.3636 10.9636 36.3636 20C36.3636 29.0364 29.0364 36.3636 20 36.3636Z"
-                fill="currentColor"
-              />
-              <path
-                d="M28.1818 16.3636H23.6364V11.8182C23.6364 10.2727 22.3636 9 20.8182 9H19.1818C17.6364 9 16.3636 10.2727 16.3636 11.8182V16.3636H11.8182C10.2727 16.3636 9 17.6364 9 19.1818V20.8182C9 22.3636 10.2727 23.6364 11.8182 23.6364H16.3636V28.1818C16.3636 29.7273 17.6364 31 19.1818 31H20.8182C22.3636 31 23.6364 29.7273 23.6364 28.1818V23.6364H28.1818C29.7273 23.6364 31 22.3636 31 20.8182V19.1818C31 17.6364 29.7273 16.3636 28.1818 16.3636Z"
-                fill="currentColor"
-              />
-            </svg> */}
             <Image
                   src="/king.jpeg"
                   alt="MediCare Logo"
