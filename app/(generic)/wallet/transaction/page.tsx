@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
 import { ChevronDown, LogOut, ArrowUp, ArrowDown, Check } from "lucide-react"
+import TransactionDetails from "@/components/TransactionDetails"
 
 export default function DoctorWallet() {
   const router = useRouter()
@@ -25,7 +26,7 @@ export default function DoctorWallet() {
     router.push("/signin")
   }
 
-  const handleWithdraw = (e : any) => {
+  const handleWithdraw = (e: any) => {
     e.preventDefault();
     router.push("/wallet/withdraw")
   }
@@ -126,79 +127,79 @@ export default function DoctorWallet() {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="border-b border-gray-200 py-4 px-6">
-                <div className="max-w-7xl mx-auto flex justify-between items-center">
-                    <div className="flex items-center">
-                        <Link href="/home" className="flex items-center">
-                            <div className="flex items-center">
-                                <Image
-                                    src="/king.jpeg"
-                                    alt="MediCare Logo"
-                                    width={150}
-                                    height={40}
-                                    className="h-10 w-auto"
-                                />
-                                <span className="ml-2 text-2xl font-medium">KHealth</span>
-                            </div>
-                        </Link>
-                    </div>
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+          <div className="flex items-center">
+            <Link href="/home" className="flex items-center">
+              <div className="flex items-center">
+                <Image
+                  src="/king.jpeg"
+                  alt="MediCare Logo"
+                  width={150}
+                  height={40}
+                  className="h-10 w-auto"
+                />
+                <span className="ml-2 text-2xl font-medium">KHealth</span>
+              </div>
+            </Link>
+          </div>
 
-                    <div className="flex items-center space-x-8">
-                        <nav className="hidden md:flex space-x-8">
-                            <Link href="/home" className="text-gray-600 font-medium">
-                                Home
-                            </Link>
-                            <Link href="/wallet" className="text-[#30c7b5] hover:text-gray-900">
-                                Wallet
-                            </Link>
-                            <Link href="/history" className="text-gray-600 hover:text-gray-900">
-                                History
-                            </Link>
-                        </nav>
-                    </div>
-                    {/* 3rd */}
-                    <div className="relative">
-                            <button className="flex items-center space-x-2" onClick={() => setIsProfileMenuOpen(!isProfileMenuOpen)}>
-                                <div className="w-10 h-10 rounded-full overflow-hidden">
-                                    <Image
-                                        src="/dp1.png"
-                                        alt="Doctor profile"
-                                        width={40}
-                                        height={40}
-                                        className="bg-gray-200"
-                                    />
-                                </div>
-                                <ChevronDown size={16} />
-                            </button>
+          <div className="flex items-center space-x-8">
+            <nav className="hidden md:flex space-x-8">
+              <Link href="/home" className="text-gray-600 font-medium">
+                Home
+              </Link>
+              <Link href="/wallet" className="text-[#30c7b5] hover:text-gray-900">
+                Wallet
+              </Link>
+              <Link href="/history" className="text-gray-600 hover:text-gray-900">
+                History
+              </Link>
+            </nav>
+          </div>
+          {/* 3rd */}
+          <div className="relative">
+            <button className="flex items-center space-x-2" onClick={() => setIsProfileMenuOpen(!isProfileMenuOpen)}>
+              <div className="w-10 h-10 rounded-full overflow-hidden">
+                <Image
+                  src="/dp1.png"
+                  alt="Doctor profile"
+                  width={40}
+                  height={40}
+                  className="bg-gray-200"
+                />
+              </div>
+              <ChevronDown size={16} />
+            </button>
 
-                            {isProfileMenuOpen && (
-                                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 border border-gray-200">
-                                    <Link href="/profile" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                                        Profile
-                                    </Link>
-                                    <Link href="/settings" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                                        Settings
-                                    </Link>
-                                    <button
-                                        onClick={handleLogout}
-                                        className="flex items-center w-full px-4 py-2 text-left text-red-600 hover:bg-gray-100"
-                                    >
-                                        <LogOut size={16} className="mr-2" />
-                                        Logout
-                                    </button>
-                                </div>
-                            )}
-                        </div>
-                </div>
-            </header>
+            {isProfileMenuOpen && (
+              <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 border border-gray-200">
+                <Link href="/profile" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  Profile
+                </Link>
+                <Link href="/settings" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  Settings
+                </Link>
+                <button
+                  onClick={handleLogout}
+                  className="flex items-center w-full px-4 py-2 text-left text-red-600 hover:bg-gray-100"
+                >
+                  <LogOut size={16} className="mr-2" />
+                  Logout
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      </header>
 
       {/* Main content */}
       <main className="max-w-7xl mx-auto px-4 py-8">
-        <h1 className="text-2xl font-medium mb-8">Wallet</h1>
+        <h1 className="text-2xl font-medium mb-8 max-md:hidden">Wallet</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="md:col-span-2">
             {/* Balance Card */}
-            <div className="bg-[#30c7b5] text-white rounded-lg p-6 mb-6 relative overflow-hidden">
+            <div className="bg-[#30c7b5] max-md:hidden text-white rounded-lg p-6 mb-6 relative overflow-hidden">
               {/* Decorative circles */}
               <div className="absolute top-0 right-0 w-40 h-40 rounded-full border border-white opacity-10"></div>
               <div className="absolute bottom-0 left-0 w-20 h-20 rounded-full border border-white opacity-10"></div>
@@ -210,19 +211,19 @@ export default function DoctorWallet() {
                   <h2 className="text-4xl font-bold">${walletData.balance.toFixed(2)}</h2>
                 </div>
                 <div className="z-[100]">
-                <button
-                  onClick={handleWithdraw}
-                  className="bg-white text-[#30c7b5] px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors cursor-pointer"
-                  
-                >
-                  Withdraw
-                </button>
+                  <button
+                    onClick={handleWithdraw}
+                    className="bg-white text-[#30c7b5] px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors cursor-pointer"
+
+                  >
+                    Withdraw
+                  </button>
                 </div>
               </div>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div className="grid max-md:hidden grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <div className="bg-gray-50 rounded-lg p-4">
                 <p className="text-gray-500 mb-1">This week</p>
                 <div className="flex items-center">
@@ -259,7 +260,7 @@ export default function DoctorWallet() {
             </div>
 
             {/* Transactions */}
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
+            <div className="bg-white border max-md:hidden border-gray-200 rounded-lg p-6">
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-lg font-medium">Recent transactions</h2>
                 <button className="text-[#30c7b5] hover:underline">See All</button>
@@ -296,7 +297,7 @@ export default function DoctorWallet() {
 
           {/* Beneficiaries */}
           <div className="md:col-span-1">
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
+            {/* <div className="bg-white border border-gray-200 rounded-lg p-6">
               <h2 className="text-lg font-medium mb-6">Beneficiaries</h2>
 
               <div className="space-y-6">
@@ -314,7 +315,18 @@ export default function DoctorWallet() {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
+            <div className="bg-white rounded-lg p-6">
+            <TransactionDetails
+              amount={200}
+              status="Completed"
+              dateTime="05/12/2024, 20:31"
+              name="Aniston Zeniter"
+              accountNumber="2286421122"
+              bank="Zenith Bank"
+              transactionId="Md34734995"
+            />
+          </div>
           </div>
         </div>
       </main>

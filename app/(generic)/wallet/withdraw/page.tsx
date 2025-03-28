@@ -30,9 +30,7 @@ export default function WithdrawPage() {
     setSelectedRecipient(id)
     // In a real app, this would navigate to the next step of the withdrawal process
     // For now, we'll just show an alert
-    setTimeout(() => {
-      alert("In a real app, this would proceed to the next step of the withdrawal process")
-    }, 100)
+    router.push('/wallet/withdraw/complete')
   }
 
   const handleNewRecipient = () => {
